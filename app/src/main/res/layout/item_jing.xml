@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="girlTen"
+            type="com.womeiyouyuming.android.pcrtest.model.GirlTen" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        app:cardCornerRadius="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorItemBg">
+
+
+            <TextView
+                android:id="@+id/textTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@{girlTen.titleText}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:layout_constraintStart_toStartOf="@+id/divider"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text=" 1 - 10 " />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:background="@drawable/divider"
+                app:layout_constraintEnd_toEndOf="@+id/shimmerLayout5"
+                app:layout_constraintStart_toStartOf="@+id/shimmerLayout1"
+                app:layout_constraintTop_toBottomOf="@id/textTitle" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerLayout1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:shimmer_auto_start="false"
+                app:setShimmer="@{girlTen.girlList.get(0)}"
+                app:layout_constraintEnd_toStartOf="@+id/shimmerLayout2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider"
+                app:shimmer_base_alpha="1"
+                app:shimmer_highlight_alpha="0.5">
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    tools:foreground="@mipmap/fg_star_3"
+                    tools:src="@mipmap/chuyin"
+                    app:setGirlImg="@{girlTen.girlList.get(0)}"
+                    />
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerLayout2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:shimmer_auto_start="false"
+                app:setShimmer="@{girlTen.girlList.get(1)}"
+                app:layout_constraintBottom_toBottomOf="@+id/shimmerLayout1"
+                app:layout_constraintEnd_toStartOf="@+id/shimmerLayout3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/shimmerLayout1"
+                app:layout_constraintTop_toTopOf="@+id/shimmerLayout1"
+                app:shimmer_base_alpha="1"
+                app:shimmer_highlight_alpha="0.5">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    tools:foreground="@mipmap/fg_star_3"
+                    tools:src="@mipmap/chuyin"
+                    app:setGirlImg="@{girlTen.girlList.get(1)}"
+                    />
+
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerLayout3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:shimmer_auto_start="false"
+                app:setShimmer="@{girlTen.girlList.get(2)}"
+                app:layout_constraintBottom_toBottomOf="@+id/shimmerLayout2"
+                app:layout_constraintEnd_toStartOf="@+id/shimmerLayout4"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/shimmerLayout2"
+                app:layout_constraintTop_toTopOf="@+id/shimmerLayout2"
+                app:shimmer_base_alpha="1"
+                app:shimmer_highlight_alpha="0.5">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    tools:foreground="@mipmap/fg_star_3"
+                    tools:src="@mipmap/chuyin"
+                    app:setGirlImg="@{girlTen.girlList.get(2)}"
+                    />
+
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerLayout4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:shimmer_auto_start="false"
+                app:setShimmer="@{girlTen.girlList.get(3)}"
+                app:layout_constraintBottom_toBottomOf="@+id/shimmerLayout3"
+                app:layout_constraintEnd_toStartOf="@+id/shimmerLayout5"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/shimmerLayout3"
+                app:layout_constraintTop_toTopOf="@+id/shimmerLayout3"
+                app:shimmer_base_alpha="1"
+                app:shimmer_highlight_alpha="0.5">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    tools:foreground="@mipmap/fg_star_3"
+                    tools:src="@mipmap/chuyin"
+                    app:setGirlImg="@{girlTen.girlList.get(3)}"
+                    />
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerLayout5"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                app:shimmer_auto_start="false"
+                app:setShimmer="@{girlTen.girlList.get(4)}"
+                app:layout_constraintBottom_toBottomOf="@+id/shimmerLayout4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/shimmerLayout4"
+                app:layout_constraintTop_toTopOf="@+id/shimmerLayout4"
+                app:shimmer_base_alpha="1"
+                app:shimmer_highlight_alpha="0.5">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    tools:foreground="@mipmap/fg_star_3"
+                    tools:src="@mipmap/chuyin"
+                    app:setGirlImg="@{girlTen.girlList.get(4)}"
+                    />
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerLayout6"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:shimmer_auto_start="false"
+                app:setShimmer="@{girlTen.girlList.get(5)}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/shimmerLayout7"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/shimmerLayout1"
+                app:shimmer_base_alpha="1"
+                app:shimmer_highlight_alpha="0.5">
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    tools:foreground="@mipmap/fg_star_3"
+                    tools:src="@mipmap/chuyin"
+                    app:setGirlImg="@{girlTen.girlList.get(5)}"
+                    />
+
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerLayout7"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:shimmer_auto_start="false"
+                app:setShimmer="@{girlTen.girlList.get(6)}"
+                app:layout_constraintBottom_toBottomOf="@+id/shimmerLayout6"
+                app:layout_constraintEnd_toStartOf="@+id/shimmerLayout8"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/shimmerLayout6"
+                app:layout_constraintTop_toTopOf="@id/shimmerLayout6"
+                app:shimmer_base_alpha="1"
+                app:shimmer_highlight_alpha="0.5">
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    tools:foreground="@mipmap/fg_star_3"
+                    tools:src="@mipmap/chuyin"
+                    app:setGirlImg="@{girlTen.girlList.get(6)}"
+                    />
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerLayout8"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:shimmer_auto_start="false"
+                app:setShimmer="@{girlTen.girlList.get(7)}"
+                app:layout_constraintBottom_toBottomOf="@+id/shimmerLayout7"
+                app:layout_constraintEnd_toStartOf="@+id/shimmerLayout9"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/shimmerLayout7"
+                app:layout_constraintTop_toTopOf="@id/shimmerLayout7"
+                app:shimmer_base_alpha="1"
+                app:shimmer_highlight_alpha="0.5">
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    tools:foreground="@mipmap/fg_star_3"
+                    tools:src="@mipmap/chuyin"
+                    app:setGirlImg="@{girlTen.girlList.get(7)}"
+                    />
+
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerLayout9"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:shimmer_auto_start="false"
+                app:setShimmer="@{girlTen.girlList.get(8)}"
+                app:layout_constraintBottom_toBottomOf="@+id/shimmerLayout8"
+                app:layout_constraintEnd_toStartOf="@+id/shimmerLayout10"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/shimmerLayout8"
+                app:layout_constraintTop_toTopOf="@id/shimmerLayout8"
+                app:shimmer_base_alpha="1"
+                app:shimmer_highlight_alpha="0.5">
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    tools:foreground="@mipmap/fg_star_3"
+                    tools:src="@mipmap/chuyin"
+                    app:setGirlImg="@{girlTen.girlList.get(8)}"
+                    />
+
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerLayout10"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                app:shimmer_auto_start="false"
+                app:setShimmer="@{girlTen.girlList.get(9)}"
+                app:layout_constraintBottom_toBottomOf="@+id/shimmerLayout9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/shimmerLayout9"
+                app:layout_constraintTop_toTopOf="@id/shimmerLayout9"
+                app:shimmer_base_alpha="1"
+                app:shimmer_highlight_alpha="0.5">
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    tools:foreground="@mipmap/fg_star_3"
+                    tools:src="@mipmap/chuyin"
+                    app:setGirlImg="@{girlTen.girlList.get(9)}"
+                    />
+
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

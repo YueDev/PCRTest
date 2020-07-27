@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.JingDialogFragment">
+
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.womeiyouyuming.android.pcrtest.viewmodel.JingViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/img_result_dialog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintEnd_toEndOf="@+id/jingRecyclerView"
+            app:layout_constraintStart_toStartOf="@+id/jingRecyclerView"
+            app:layout_constraintTop_toBottomOf="@+id/imageView11"
+            tools:text="本次300抽结果如下：\n三星个数0个，三星概率0.00%。\n哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/jingRecyclerView"
+            android:layout_width="300dp"
+            android:layout_height="288dp"
+
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@mipmap/bg_result_dialog"
+            android:fadeScrollbars="false"
+
+            android:scrollbarSize="4dp"
+            android:scrollbarStyle="insideInset"
+            android:scrollbarThumbVertical="@drawable/thumb"
+            android:scrollbarTrackVertical="@drawable/track"
+            android:scrollbars="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resultTextView" />
+
+        <com.womeiyouyuming.android.pcrtest.view.ScaleButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@mipmap/btn_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/jingRecyclerView"
+            app:layout_constraintStart_toStartOf="@+id/jingRecyclerView"
+            app:layout_constraintTop_toBottomOf="@+id/jingRecyclerView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

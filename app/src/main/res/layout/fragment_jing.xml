@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.womeiyouyuming.android.pcrtest.viewmodel.JingViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.JingFragment">
+
+
+        <ImageView
+            android:id="@+id/bg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/bg_jing"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
+            android:background="@mipmap/bg_card"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bg"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:text="@string/text_up"
+                android:textColor="@color/colorUpText"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/BGTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="花费宝石"
+                app:layout_constraintStart_toStartOf="@+id/titleText"
+                app:layout_constraintTop_toBottomOf="@+id/titleText" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/icon_diamond"
+                app:layout_constraintBottom_toBottomOf="@+id/textView2"
+                app:layout_constraintStart_toEndOf="@+id/textView2"
+                app:layout_constraintTop_toTopOf="@+id/textView2"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/textDiamondNumber"
+                style="@style/NormalTextStyle"
+                android:layout_width="56dp"
+                android:layout_height="0dp"
+                android:text="@{String.valueOf(viewModel.drawNumLiveData * 150)}"
+                tools:text="45000"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+            <TextView
+                android:id="@+id/textDrawNumber"
+                style="@style/NormalTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:text="@{String.valueOf(viewModel.drawNumLiveData)}"
+                app:layout_constraintBottom_toBottomOf="@+id/textView4"
+                app:layout_constraintEnd_toEndOf="@+id/textDiamondNumber"
+                app:layout_constraintStart_toEndOf="@+id/textView2"
+                app:layout_constraintStart_toStartOf="@+id/imageView3"
+                app:layout_constraintTop_toTopOf="@+id/textView4"
+                tools:text="10000" />
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/BGTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="抽取次数"
+                app:layout_constraintEnd_toEndOf="@+id/textView2"
+                app:layout_constraintStart_toStartOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/textView6"
+                style="@style/BGTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="3星数量"
+                app:layout_constraintEnd_toEndOf="@+id/textView4"
+                app:layout_constraintStart_toStartOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <TextView
+                android:id="@+id/textThreeNumber"
+                style="@style/NormalTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@{String.valueOf(viewModel.star3NumLiveData)}"
+                app:layout_constraintBottom_toBottomOf="@+id/textView6"
+                app:layout_constraintEnd_toEndOf="@+id/textDrawNumber"
+                app:layout_constraintStart_toStartOf="@+id/textDrawNumber"
+                app:layout_constraintTop_toTopOf="@+id/textView6"
+                tools:text="7" />
+
+            <TextView
+                android:id="@+id/textView8"
+                style="@style/BGTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="3星概率"
+                app:layout_constraintEnd_toEndOf="@+id/textView6"
+                app:layout_constraintStart_toStartOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <TextView
+                android:id="@+id/textThreeRate"
+                style="@style/NormalTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:drawNum="@{viewModel.drawNumLiveData}"
+                app:layout_constraintBottom_toBottomOf="@+id/textView8"
+                app:layout_constraintEnd_toEndOf="@+id/textThreeNumber"
+                app:layout_constraintStart_toStartOf="@+id/textThreeNumber"
+                app:layout_constraintTop_toTopOf="@+id/textView8"
+                app:star3Num="@{viewModel.star3NumLiveData}"
+                tools:text="72.56%" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textThreeRate"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintEnd_toEndOf="@+id/titleText"
+                app:layout_constraintTop_toTopOf="@+id/textView2">
+
+                <ImageView
+                    android:id="@+id/imageViewJing"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:scaleType="fitCenter"
+                    tools:src="@mipmap/bg_jing" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <com.womeiyouyuming.android.pcrtest.view.ScaleButton
+                android:id="@+id/buttonJing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@mipmap/btn_jing_small"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/buttonResult"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/buttonReset" />
+
+            <com.womeiyouyuming.android.pcrtest.view.ScaleButton
+                android:id="@+id/buttonReset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/btn_reset_small"
+                app:layout_constraintBottom_toBottomOf="@+id/buttonJing"
+                app:layout_constraintStart_toStartOf="@+id/titleText"
+                app:layout_constraintTop_toTopOf="@+id/buttonJing" />
+
+            <com.womeiyouyuming.android.pcrtest.view.ScaleButton
+                android:id="@+id/buttonResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/btn_result_small"
+                app:layout_constraintBottom_toBottomOf="@+id/buttonJing"
+                app:layout_constraintEnd_toEndOf="@+id/titleText"
+                app:layout_constraintTop_toTopOf="@+id/buttonJing" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/jingRecyclerView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@mipmap/bg_result_dialog"
+
+                android:scrollbarSize="4dp"
+                android:scrollbars="vertical"
+                android:scrollbarStyle="insideInset"
+                android:fadeScrollbars="false"
+                android:scrollbarThumbVertical="@drawable/thumb"
+                android:scrollbarTrackVertical="@drawable/track"
+
+                app:layout_constraintBottom_toTopOf="@+id/buttonJing"
+                app:layout_constraintEnd_toEndOf="@+id/buttonResult"
+                app:layout_constraintStart_toStartOf="@+id/buttonReset"
+                app:layout_constraintTop_toBottomOf="@+id/textThreeRate" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

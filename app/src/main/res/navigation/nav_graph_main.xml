@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.womeiyouyuming.android.pcrtest.fragment.TitleFragment"
+        android:label="fragment_title"
+        tools:layout="@layout/fragment_title" >
+        <action
+            android:id="@+id/action_titleFragment_to_jingFragment"
+            app:destination="@id/jingFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/jingFragment"
+        android:name="com.womeiyouyuming.android.pcrtest.fragment.JingFragment"
+        android:label="fragment_jing"
+        tools:layout="@layout/fragment_jing" >
+        <action
+            android:id="@+id/action_jingFragment_to_jingDialogFragment"
+            app:destination="@id/jingDialogFragment" />
+        <action
+            android:id="@+id/action_jingFragment_to_resultFragment"
+            app:destination="@id/resultFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+
+
+
+
+    <dialog
+        android:id="@+id/jingDialogFragment"
+        android:name="com.womeiyouyuming.android.pcrtest.fragment.JingDialogFragment"
+        android:label="JingDialogFragment" />
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.womeiyouyuming.android.pcrtest.fragment.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" />
+
+
+</navigation>

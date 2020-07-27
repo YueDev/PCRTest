@@ -1,0 +1,40 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="cardBackgroundColor">@android:color/white</item>
+
+<!--        这一行是深色文字来适配浅色状态栏，我不是很喜欢，就用的默认白色状态栏文字-->
+<!--        <item name="android:windowLightStatusBar">true</item>-->
+<!--      这一行是透明状态栏  -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+
+
+        <!-- 下边两行可以透明导航栏，包括小横条，个人不是很喜欢       -->
+<!--        <item name="android:navigationBarColor">@android:color/transparent</item>-->
+<!--        <item name="android:windowTranslucentNavigation">true</item>-->
+
+    </style>
+    
+    <style name="BGTextStyle" parent="TextAppearance.AppCompat.Body1">
+
+        <item name="android:background">@drawable/drawable_bg_text</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@android:color/white</item>
+
+    </style>
+
+    <style name="NormalTextStyle" parent="TextAppearance.AppCompat.Body1">
+
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center_vertical|end</item>
+
+    </style>
+
+
+</resources>

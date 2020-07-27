@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+
+    <color name="colorUpText">#e68900</color>
+    <color name="colorTextBg">#6097f2</color>
+    <color name="colorItemBg">#eff3fc</color>
+    <color name="colorDivider">#b8cced</color>
+
+    <color name="colorFastScrollTrack">#bbc0d3</color>
+
+
+
+
+</resources>
