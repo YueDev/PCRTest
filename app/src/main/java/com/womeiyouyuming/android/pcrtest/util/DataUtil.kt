@@ -14,7 +14,7 @@ import com.womeiyouyuming.android.pcrtest.model.Girl
 
 //up角色的序号、概率，概率是万分制  注意2星在第10抽的时候有额外概率
 //已经在IDEA里测试过很多次，每次都是以千万次测算，这个算法没有问题
-private val upStar3s = listOf(15 to 70)
+private val upStar3s = listOf(17 to 70)
 private val upStar2s = listOf<Pair<Int, Int>>()
 private val upStar2sTenth = listOf<Pair<Int, Int>>()
 private val upStar1s = listOf<Pair<Int, Int>>()
@@ -122,7 +122,9 @@ val star3Girls = listOf(
     Girl("姬塔", 3, R.mipmap.jita),
     Girl("纯", 3, R.mipmap.chun),
     Girl("亚里莎", 3, R.mipmap.yalisha),
-    Girl("镜华", 3, R.mipmap.jinghua)
+    Girl("镜华", 3, R.mipmap.jinghua),
+    Girl("伊莉亚", 3, R.mipmap.yiliya),
+    Girl("铃莓（夏日）", 3, R.mipmap.lingmei_xiari)
 )
 
 val star2Girls = listOf(
@@ -142,7 +144,9 @@ val star2Girls = listOf(
     Girl("珠希", 2, R.mipmap.zhuxi),
     Girl("美东", 2, R.mipmap.meidong),
     Girl("深月", 2, R.mipmap.shenyue),
-    Girl("铃", 2, R.mipmap.ling)
+    Girl("铃", 2, R.mipmap.ling),
+    Girl("纺希", 2, R.mipmap.fangxi),
+    Girl("美里", 2, R.mipmap.meili)
 )
 
 val star1Girls = listOf(
@@ -151,11 +155,16 @@ val star1Girls = listOf(
     Girl("未奏希", 1, R.mipmap.weizouxi),
     Girl("胡桃", 1, R.mipmap.hutao),
     Girl("依里", 1, R.mipmap.yili),
-    Girl("铃莓", 1, R.mipmap.meiling),
+    Girl("铃莓", 1, R.mipmap.lingmei),
     Girl("由加莉", 1, R.mipmap.youjiali),
     Girl("碧", 1, R.mipmap.bi),
     Girl("美咲", 1, R.mipmap.meixiao),
     Girl("莉玛", 1, R.mipmap.lima)
+)
+
+//不在池子里的角色，一般为限定角
+val otherGirls = listOf(
+    Girl("佩可（夏日）", 3, R.mipmap.peike_xiari)
 )
 
 

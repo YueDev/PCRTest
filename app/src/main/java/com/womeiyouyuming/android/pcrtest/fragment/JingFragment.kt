@@ -52,6 +52,7 @@ class JingFragment : Fragment() {
 
         //  模仿游戏内标题文字 渐变色 fff0ab -> d56001
 
+
         val textHeight = titleText.paint.descent() - titleText.paint.ascent()
 
         val linearGradient = LinearGradient(
@@ -64,7 +65,6 @@ class JingFragment : Fragment() {
             Shader.TileMode.CLAMP
         )
         titleText.paint.shader = linearGradient
-
 
         initImageViewJing()
 
@@ -132,7 +132,7 @@ class JingFragment : Fragment() {
 
     //初始化默认imageView，一般是当期up角色
     private fun initImageViewJing() {
-        imageViewJing.setImageResource(R.mipmap.img_random_12)
+        imageViewJing.setImageResource(R.mipmap.img_random_13)
     }
 
 }

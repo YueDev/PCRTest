@@ -53,9 +53,12 @@
                 android:gravity="center"
                 android:text="@string/text_up"
                 android:textColor="@color/colorUpText"
-                android:textSize="18sp"
                 android:textStyle="bold"
                 android:singleLine="true"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMaxTextSize="24sp"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeStepGranularity="2sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
